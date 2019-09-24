@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Door_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-bL-S1T">
+                                <rect key="frame" x="130" y="20" width="61" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9IX-8n-Jzq">
+                                <rect key="frame" x="135.5" y="419" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchStateChange:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ecS-8A-qYJ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Switch State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6i-dl-hV2">
+                                <rect key="frame" x="20" y="91" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door-open" translatesAutoresizingMaskIntoConstraints="NO" id="dnX-r7-Uzv">
+                                <rect key="frame" x="74.5" y="154.5" width="171" height="171"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P6i-dl-hV2" firstAttribute="top" secondItem="hbV-bL-S1T" secondAttribute="bottom" constant="35" id="39n-pK-8PB"/>
+                            <constraint firstItem="P6i-dl-hV2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Eoe-4w-qbc"/>
+                            <constraint firstItem="P6i-dl-hV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N6i-I3-ZCV"/>
+                            <constraint firstItem="hbV-bL-S1T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="fui-QZ-VsR"/>
+                            <constraint firstItem="hbV-bL-S1T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hxC-a5-ac7"/>
+                            <constraint firstItem="dnX-r7-Uzv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDt-5G-iGe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9IX-8n-Jzq" secondAttribute="bottom" constant="30" id="n2z-BY-o9V"/>
+                            <constraint firstItem="dnX-r7-Uzv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uD4-BC-u3b"/>
+                            <constraint firstItem="9IX-8n-Jzq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vqY-Gf-fPm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="doorImage" destination="dnX-r7-Uzv" id="9qZ-q9-5YD"/>
+                        <outlet property="doorSwitch" destination="9IX-8n-Jzq" id="846-0w-qmX"/>
+                        <outlet property="switchState" destination="P6i-dl-hV2" id="HnH-Nc-u0h"/>
+                        <outlet property="todayDate" destination="hbV-bL-S1T" id="ILf-fj-HN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="117.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="door-open" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
