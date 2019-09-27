@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         switchState.text = doorLockedText
         
         doorImage.image = UIImage(named: "door-close")
+        doorSwitch.isEnabled = false;
     }
     
     func unlockDoor() {
@@ -95,7 +96,6 @@ class ViewController: UIViewController {
         
         if state {
             displayActionSheet()
-//            lockDoor(date: Date())
         } else {
             unlockDoor()
         }
@@ -103,8 +103,7 @@ class ViewController: UIViewController {
     
 }
 
-extension Date
-{
+extension Date {
     func toString( dateFormat format  : String ) -> String
     {
         let dateFormatter = DateFormatter()
